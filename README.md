@@ -18,7 +18,7 @@ A minimal Flask starter project designed to help you quickly set up a clean, sim
 
 2. Create a virtual environment (recommended):
    ```bash
-   python3 -m venv .venv
+   python3 -m venv venv
    source venv/bin/activate
    ```
 
