@@ -3,8 +3,10 @@
 A minimal Flask starter project designed to help you quickly set up a clean, simple, and efficient web application. This project is structured to keep things lightweight and focuses on productivity, with all your code contained in a single file (`app.py`), along with basic templates and static assets.
 
 ## Preparation
+```bash
 sudo apt update
 sudo apt install python3 python3-venv python3-pip -y
+```
 
 ## Features
 - Single-file Flask application (`app.py`) to maximize productivity and simplicity.
