@@ -1,32 +1,60 @@
-flask-minimal
+# flask-minimal
+
 Proyek starter Flask minimal yang dirancang untuk membantu Anda menyiapkan aplikasi web yang bersih, sederhana, dan efisien dengan cepat. Proyek ini disusun agar tetap ringan dan fokus pada produktivitas, dengan semua kode Anda terkandung dalam satu file (app.py), bersama dengan template dasar dan aset statis.
 
-Fitur
--Aplikasi Flask dalam satu file (app.py) untuk memaksimalkan produktivitas dan kesederhanaan. -Struktur template HTML dasar dengan styling dan JavaScript minimal. -Pengaturan proyek yang sederhana dan intuitif tanpa kompleksitas yang tidak perlu. -Mudah disesuaikan untuk pengembangan aplikasi web yang cepat.
 
-Persiapan
+## Fitur
+-Aplikasi Flask dalam satu file (app.py) untuk memaksimalkan produktivitas dan kesederhanaan.
+-Struktur template HTML dasar dengan styling dan JavaScript minimal.
+-Pengaturan proyek yang sederhana dan intuitif tanpa kompleksitas yang tidak perlu.
+-Mudah disesuaikan untuk pengembangan aplikasi web yang cepat.
+
+
+## Persiapan
+```bash
 sudo apt update
 sudo apt install python3 python3-venv python3-pip -y
-Instalasi
-Clone repository:
+```
+
+## Instalasi
+
+1. Clone repository:
+```bash
 git clone https://github.com/yourusername/flask-minimal.git
 cd flask-minimal
-Buat virtual environment (disarankan):
+```
+
+2. Buat virtual environment (disarankan):
+```bash
 python3 -m venv venv
 source venv/bin/activate
-Install dependensi yang diperlukan:
+```
+
+3. Install dependensi yang diperlukan:
+```bash
 pip install -r requirements.txt
-Jalankan aplikasi:
+```
+
+4. Jalankan aplikasi:
+```bash
 python app.py
+```
+
+   
+
 Aplikasi Flask akan mulai berjalan, dan Anda dapat melihatnya dengan membuka http://localhost:5000 di browser Anda.
 
-Tambahan
+
+## Tambahan
+
 Agar Flask-app otomatis berjalan setiap kali EC2 instance dinyalakan kita bisa menggunakan systemd, caranya :
+1. Buat file service untuk systemd
 
-Buat file service untuk systemd
+```bash
 sudo nano /etc/systemd/system/flask-app.service
+```
 Paste isi file service, sesuaikan path jika berbeda.
-
+```
  [Unit]
 Description=Flask Minimal App
 After=network.target
@@ -42,8 +70,11 @@ RestartSec=10
 
 [Install]
 WantedBy=multi-user.target
+```
+
 Aktifkan dan jalankan service
 
+```bash
 # Reload systemd
 sudo systemctl daemon-reload
 
@@ -55,19 +86,24 @@ sudo systemctl start flask-app.service
 
 # Cek status
 sudo systemctl status flask-app.service
-Penggunaan
+```
+
+## Penggunaan
+
 Proyek starter ini siap digunakan sebagai fondasi untuk membangun aplikasi web. File app.py berisi semua rute dan logika Flask, membuatnya mudah untuk diperluas dan disesuaikan. Anda dapat menambahkan lebih banyak template, rute, atau file statis sesuai kebutuhan.
 
-Kostumisasi
+## Kostumisasi
 You can easily modify:
 
-Struktur HTML di templates/index.html
-Styling di static/style.css
-Interaktivitas di static/script.js
+ - Struktur HTML di `templates/index.html`
+ - Styling di `static/style.css`
+ - Interaktivitas di `static/script.js`
+
 Jangan ragu untuk memperbarui file app.py untuk menambahkan rute atau logika tambahan sesuai kebutuhan Anda.
 
-Lisensi
+## Lisensi
 Proyek ini dilisensikan di bawah Lisensi MIT.
 
-Kontribusi
-Jangan ragu untuk melakukan fork repository ini dan membuat pull request jika Anda memiliki perbaikan atau perbaikan bug. Jika Anda memiliki saran, buka issue, dan kita akan membahasnya! Proyek ini dibangun dengan mempertimbangkan kesederhanaan dan efisiensi, sempurna untuk memulai aplikasi web kecil atau prototipe dengan overhead minimal.
+## Kontribusi
+Jangan ragu untuk melakukan fork repository ini dan membuat pull request jika Anda memiliki perbaikan atau perbaikan bug. Jika Anda memiliki saran, buka issue, dan kita akan membahasnya!
+Proyek ini dibangun dengan mempertimbangkan kesederhanaan dan efisiensi, sempurna untuk memulai aplikasi web kecil atau prototipe dengan overhead minimal.
