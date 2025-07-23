@@ -45,9 +45,9 @@ python app.py
 Aplikasi Flask akan mulai berjalan, dan Anda dapat melihatnya dengan membuka http://localhost:5000 di browser Anda.
 
 
-## Tambahan
+## Tambahan Agar Berjalan Otoamatis
 
-Agar Flask-app otomatis berjalan setiap kali EC2 instance dinyalakan kita bisa menggunakan systemd, caranya :
+Supaya Flask-app otomatis berjalan setiap kali EC2 instance dinyalakan kita bisa menggunakan systemd, caranya :
 1. Buat file service untuk systemd
 
 ```bash
