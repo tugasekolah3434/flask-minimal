@@ -48,12 +48,12 @@ Aplikasi Flask akan mulai berjalan, dan Anda dapat melihatnya dengan membuka htt
 ## Tambahan Agar Berjalan Otoamatis
 
 Supaya Flask-app otomatis berjalan setiap kali EC2 instance dinyalakan kita bisa menggunakan systemd, caranya :
-1. Buat file service untuk systemd
+1. Buatlah file service terlebih dahulu untuk systemd
 
 ```bash
 sudo nano /etc/systemd/system/flask-app.service
 ```
-Paste isi file service, sesuaikan path jika berbeda.
+Lalu, Paste isi file service, sesuaikan path jika berbeda.
 ```
  [Unit]
 Description=Flask Minimal App
